@@ -23,13 +23,11 @@ This project is a full-stack clone of the popular accommodation booking platform
 - Figma (for UI/UX design)
 
 ## Learning Objectives
-
-- Build responsive UI/UX designs
-- Structure complex full-stack applications
-- Practice real-world team collaboration
-- Develop reusable UI components
-- Follow web development best practices
+- Learn to implement responsive UI/UX designs
+- Understand how to structure a complex web application
+- Practice working in a team with defined roles
+- Develop skills in component-based frontend architecture
+- Learn best practices for web application development
 
 ## Project Repository
-
 GitHub Repository: [airbnb-clone-project](https://github.com/mercyXp/airbnb-clone-project)
