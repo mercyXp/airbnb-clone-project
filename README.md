@@ -39,7 +39,7 @@ An in-memory data store used for caching frequently accessed data to improve app
 A containerization platform that packages the entire application with its dependencies into portable containers, ensuring consistent development, testing, and deployment environments.
 
 ### CI/CD Pipelines
-Automated Continuous Integration and Continuous Deployment pipelines that automatically run tests, check code quality, and deploy updates to production environments, ensuring fast, safe, and reliable releases.
+> Automated Continuous Integration and Continuous Deployment pipelines that automatically run tests, check code quality, and deploy updates to production environments, ensuring fast, safe, and reliable releases.
 ---
 
 
