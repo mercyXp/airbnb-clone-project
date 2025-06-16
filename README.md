@@ -15,6 +15,33 @@ This project is a full-stack clone of the popular accommodation booking platform
 - CSS
 - JavaScript
 - React (or similar framework)
+## Technology Stack
+
+### Django
+A high-level Python web framework used for building the RESTful API. It handles URL routing, request handling, user authentication, ORM (Object Relational Mapping), and many backend business logics efficiently.
+
+### Django REST Framework (DRF)
+An extension of Django that provides powerful tools and features to easily create and manage RESTful APIs. It simplifies serialization, authentication, and API versioning.
+
+### PostgreSQL
+A powerful open-source relational database system used for data storage. It efficiently manages structured data such as user information, property listings, bookings, payments, and more.
+
+### GraphQL
+A query language for APIs that allows clients to request exactly the data they need. It helps optimize data fetching and reduces over-fetching or under-fetching issues common in REST APIs.
+
+### Celery
+An asynchronous task queue used to handle background tasks such as sending notifications, processing payments, and managing booking confirmations without blocking the main application flow.
+
+### Redis
+An in-memory data store used for caching frequently accessed data to improve application performance. It also serves as a broker for Celery tasks and manages session data.
+
+### Docker
+A containerization platform that packages the entire application with its dependencies into portable containers, ensuring consistent development, testing, and deployment environments.
+
+### CI/CD Pipelines
+Automated Continuous Integration and Continuous Deployment pipelines that automatically run tests, check code quality, and deploy updates to production environments, ensuring fast, safe, and reliable releases.
+---
+
 
 ### Version Control:
 - Git & GitHub
