@@ -149,3 +149,114 @@ A well-designed booking system reduces friction in the user journey, increases c
 - Copyright information
 
 > Each component will be designed for reusability and consistency across the application.
+>
+## Database Design
+
+### Key Entities and Relationships
+
+---
+
+### 1️⃣ Users
+
+Represents users of the platform (guests and hosts).
+
+**Fields:**
+- `id` (Primary Key)
+- `username`
+- `email`
+- `password` (hashed)
+- `first_name`
+- `last_name`
+- `profile_picture`
+- `is_host` (Boolean to distinguish hosts from regular users)
+
+**Relationships:**
+- A user can own multiple properties (if `is_host` is true).
+- A user can make multiple bookings.
+- A user can leave multiple reviews.
+
+---
+
+### 2️⃣ Properties
+
+Represents the listings available for booking.
+
+**Fields:**
+- `id` (Primary Key)
+- `host_id` (Foreign Key → Users)
+- `title`
+- `description`
+- `address`
+- `price_per_night`
+- `max_guests`
+- `amenities`
+- `created_at`
+
+**Relationships:**
+- A property belongs to one host (user).
+- A property can have multiple bookings.
+- A property can have multiple reviews.
+
+---
+
+### 3️⃣ Bookings
+
+Represents reservations made by users.
+
+**Fields:**
+- `id` (Primary Key)
+- `user_id` (Foreign Key → Users)
+- `property_id` (Foreign Key → Properties)
+- `check_in_date`
+- `check_out_date`
+- `total_price`
+- `status` (Pending, Confirmed, Cancelled)
+
+**Relationships:**
+- A booking belongs to one user and one property.
+- A booking can have one related payment.
+
+---
+
+### 4️⃣ Reviews
+
+Represents feedback left by users on properties.
+
+**Fields:**
+- `id` (Primary Key)
+- `user_id` (Foreign Key → Users)
+- `property_id` (Foreign Key → Properties)
+- `rating` (e.g., 1–5 stars)
+- `comment`
+- `created_at`
+
+**Relationships:**
+- A review belongs to one user and one property.
+
+---
+
+### 5️⃣ Payments
+
+Represents payment transactions for bookings.
+
+**Fields:**
+- `id` (Primary Key)
+- `booking_id` (Foreign Key → Bookings)
+- `payment_date`
+- `amount`
+- `payment_method`
+- `payment_status` (Pending, Completed, Failed)
+
+**Relationships:**
+- A payment belongs to one booking.
+
+---
+
+### Summary of Relationships
+
+- **Users** can have multiple **Properties**, **Bookings**, and **Reviews**.
+- **Properties** belong to a **User** (host), and can have multiple **Bookings** and **Reviews**.
+- **Bookings** belong to both **Users** and **Properties**.
+- **Payments** are linked to a **Booking**.
+- **Reviews** belong to both **Users** and **Properties**.
+
