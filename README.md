@@ -401,3 +401,43 @@ Sensitive credentials such as API keys, database passwords, and secret keys will
 - Prevents accidental exposure of sensitive information in code repositories.
 - Ensures secure deployment practices.
 
+## CI/CD Pipeline
+
+### What is CI/CD?
+
+CI/CD stands for Continuous Integration and Continuous Deployment (or Delivery). It is a set of automated processes that allow code changes to be automatically tested, integrated, and deployed to production in a reliable and efficient way.
+
+- **Continuous Integration (CI):** Automatically integrates code changes from multiple developers into a shared repository several times a day. It runs automated tests to ensure that new code does not break existing functionality.
+- **Continuous Deployment (CD):** Automatically deploys tested and approved code changes to production or staging environments without manual intervention.
+
+---
+
+### Why CI/CD is Important for This Project
+
+- 🚀 **Faster Development:** Speeds up the release cycle by automating testing and deployment.
+- ✅ **Improved Code Quality:** Early detection of bugs and integration issues.
+- 🔒 **More Reliable Deployments:** Reduces human error by automating the deployment process.
+- 👥 **Better Collaboration:** Allows multiple team members to work together efficiently without conflicts.
+- 🛡️ **Ensures Stability:** Automated tests ensure that the application remains stable even as new features are added.
+
+---
+
+### Tools Used
+
+- **GitHub Actions:** For automating the CI/CD workflows, running tests, building Docker images, and deploying to servers.
+- **Docker:** For containerizing the application, ensuring consistent environments across development, testing, and production.
+- **Docker Compose:** For managing multi-container Docker applications.
+- **AWS / DigitalOcean / Render / Heroku:** (Optional) For hosting and deploying the application.
+- **PostgreSQL:** Production-ready database integration within the CI/CD pipeline.
+- **Coverage Tools (e.g. Codecov):** For monitoring test coverage and code quality.
+
+---
+
+### CI/CD Workflow Overview
+
+1. Developer pushes code to GitHub repository.
+2. GitHub Actions triggers automated tests and code checks.
+3. Docker builds and tests containers.
+4. If tests pass, Docker image is deployed to staging or production server.
+5. Monitoring tools ensure application health post-deployment.
+
