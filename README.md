@@ -15,33 +15,25 @@ This project is a full-stack clone of the popular accommodation booking platform
 - CSS
 - JavaScript
 - React (or similar framework)
-## Technology Stack
+## Technology Stack 
+- Django
+> A high-level Python web framework used for building the RESTful API. It handles URL routing, request handling, user authentication, ORM (Object Relational Mapping), and many backend business logics efficiently.
+- Django REST Framework (DRF)
+> An extension of Django that provides powerful tools and features to easily create and manage RESTful APIs. It simplifies serialization, authentication, and API versioning.
+- PostgreSQL
+> A powerful open-source relational database system used for data storage. It efficiently manages structured data such as user information, property listings, bookings, payments, and more.
+ GraphQL
+> A query language for APIs that allows clients to request exactly the data they need. It helps optimize data fetching and reduces over-fetching or under-fetching issues common in REST APIs.
+- Celery
+> An asynchronous task queue used to handle background tasks such as sending notifications, processing payments, and managing booking confirmations without blocking the main application flow.
+- Redis
+> An in-memory data store used for caching frequently accessed data to improve application performance. It also serves as a broker for Celery tasks and manages session data.
+- Docker
+> A containerization platform that packages the entire application with its dependencies into portable containers, ensuring consistent development, testing, and deployment environments.
 
-### Django
-A high-level Python web framework used for building the RESTful API. It handles URL routing, request handling, user authentication, ORM (Object Relational Mapping), and many backend business logics efficiently.
-
-### Django REST Framework (DRF)
-An extension of Django that provides powerful tools and features to easily create and manage RESTful APIs. It simplifies serialization, authentication, and API versioning.
-
-### PostgreSQL
-A powerful open-source relational database system used for data storage. It efficiently manages structured data such as user information, property listings, bookings, payments, and more.
-
-### GraphQL
-A query language for APIs that allows clients to request exactly the data they need. It helps optimize data fetching and reduces over-fetching or under-fetching issues common in REST APIs.
-
-### Celery
-An asynchronous task queue used to handle background tasks such as sending notifications, processing payments, and managing booking confirmations without blocking the main application flow.
-
-### Redis
-An in-memory data store used for caching frequently accessed data to improve application performance. It also serves as a broker for Celery tasks and manages session data.
-
-### Docker
-A containerization platform that packages the entire application with its dependencies into portable containers, ensuring consistent development, testing, and deployment environments.
-
-### CI/CD Pipelines
+- CI/CD Pipelines
 > Automated Continuous Integration and Continuous Deployment pipelines that automatically run tests, check code quality, and deploy updates to production environments, ensuring fast, safe, and reliable releases.
 ---
-
 
 ### Version Control:
 - Git & GitHub
@@ -56,27 +48,25 @@ A containerization platform that packages the entire application with its depend
 - Develop skills in component-based frontend architecture
 - Learn best practices for web application development
 
-## Project Repository
-GitHub Repository: [airbnb-clone-project](https://github.com/mercyXp/airbnb-clone-project)
-
+---
 
 ## UI/UX Design Planning
 
-### Design Goals
+#### Design Goals
 
 - Create intuitive booking flow.
 - Maintain visual consistency.
 - Ensure fast loading times.
 - Prioritize mobile responsiveness.
 
-### Key Features
+#### Key Features
 
 - Property search and filtering.
 - Detailed property viewing.
 - Secure checkout process.
 - User authentication.
 
-### Primary Pages
+#### Primary Pages
 
 | Page                 | Description |
 |-----------------------|-------------|
@@ -84,7 +74,7 @@ GitHub Repository: [airbnb-clone-project](https://github.com/mercyXp/airbnb-clon
 | **Listing Detailed View** | Complete property details with images and booking form. |
 | **Simple Checkout View**  | Streamlined payment and booking confirmation. |
 
-### Importance of User-Friendly Design
+#### Importance of User-Friendly Design
 
 A well-designed booking system reduces friction in the user journey, increases conversion rates, and improves customer satisfaction. Clear navigation, intuitive interfaces, and responsive design are critical for success.
 
@@ -92,7 +82,7 @@ A well-designed booking system reduces friction in the user journey, increases c
 
 ## Figma Design Specifications
 
-### Color Styles
+#### Color Styles
 
 - **Primary:** `#FF5A5F`
 - **Secondary:** `#008489`
@@ -100,7 +90,7 @@ A well-designed booking system reduces friction in the user journey, increases c
 - **Text:** `#222222`
 - **Secondary Text:** `#717171`
 
-### Typography
+#### Typography
 
 - **Primary Font:** Circular, Medium (500), 16px
 - **Headings:** Circular, Bold (700), 24px–32px
@@ -125,23 +115,23 @@ A well-designed booking system reduces friction in the user journey, increases c
 
 ## UI Component Patterns
 
-### Planned Components
+#### Planned Components
 
-#### Navbar
+##### Navbar
 
 - Logo
 - Search bar
 - User navigation
 - Responsive menu
 
-#### Property Card
+##### Property Card
 
 - Property image
 - Basic details (price, location, rating)
 - Favorite button
 - Responsive layout
 
-#### Footer
+##### Footer
 
 - Site links
 - Company information
@@ -152,11 +142,11 @@ A well-designed booking system reduces friction in the user journey, increases c
 >
 ## Database Design
 
-### Key Entities and Relationships
+#### Key Entities and Relationships
 
 ---
 
-### 1️⃣ Users
+#### 1️⃣ Users
 
 Represents users of the platform (guests and hosts).
 
@@ -177,7 +167,7 @@ Represents users of the platform (guests and hosts).
 
 ---
 
-### 2️⃣ Properties
+#### 2️⃣ Properties
 
 Represents the listings available for booking.
 
@@ -199,7 +189,7 @@ Represents the listings available for booking.
 
 ---
 
-### 3️⃣ Bookings
+#### 3️⃣ Bookings
 
 Represents reservations made by users.
 
@@ -218,7 +208,7 @@ Represents reservations made by users.
 
 ---
 
-### 4️⃣ Reviews
+#### 4️⃣ Reviews
 
 Represents feedback left by users on properties.
 
@@ -235,7 +225,7 @@ Represents feedback left by users on properties.
 
 ---
 
-### 5️⃣ Payments
+#### 5️⃣ Payments
 
 Represents payment transactions for bookings.
 
@@ -263,49 +253,49 @@ Represents payment transactions for bookings.
 ---
 ## Feature Breakdown
 
-### 1️⃣ User Management
+#### 1️⃣ User Management
 
 The system allows users to register, log in, and manage their profiles. Users can be either guests or hosts. Hosts can list properties, while guests can book properties and leave reviews. Secure authentication and role-based access control ensure a safe and personalized experience.
 
 ---
 
-### 2️⃣ Property Management
+#### 2️⃣ Property Management
 
 Hosts can create, update, and delete property listings. Each property includes details such as location, price, images, amenities, and availability. This feature allows the platform to maintain an up-to-date catalog of accommodations for potential guests.
 
 ---
 
-### 3️⃣ Booking System
+#### 3️⃣ Booking System
 
 Guests can search for available properties, select dates, and make bookings. The system checks property availability, calculates total costs, and handles reservation status (pending, confirmed, canceled). This is the core functionality that enables users to reserve stays.
 
 ---
 
-### 4️⃣ Payment Integration
+#### 4️⃣ Payment Integration
 
 A secure payment system processes transactions for bookings. It handles payment methods, calculates amounts based on booking details, and manages payment status. This ensures a smooth and reliable financial process for both guests and hosts.
 
 ---
 
-### 5️⃣ Reviews and Ratings
+#### 5️⃣ Reviews and Ratings
 
 Guests can leave reviews and ratings after completing their stays. Reviews include written feedback and star ratings, helping future guests make informed decisions and providing valuable feedback to hosts.
 
 ---
 
-### 6️⃣ Search and Filtering
+#### 6️⃣ Search and Filtering
 
 Guests can search for properties based on location, price, amenities, availability, and other filters. This feature enhances user experience by allowing quick access to relevant listings that match guest preferences.
 
 ---
 
-### 7️⃣ Notifications
+#### 7️⃣ Notifications
 
 The system sends notifications for important events such as booking confirmations, cancellations, and payment updates. Notifications keep both guests and hosts informed throughout the booking process.
 
 ---
 
-### 8️⃣ Admin Dashboard (Optional Advanced Feature)
+#### 8️⃣ Admin Dashboard (Optional Advanced Feature)
 
 An administrative panel allows platform administrators to oversee user activity, manage listings, handle disputes, and monitor overall platform health. This feature supports platform governance and maintenance.
 
@@ -315,7 +305,7 @@ Securing the backend APIs is essential to protect user data, ensure the integrit
 
 ---
 
-### 1️⃣ Authentication
+#### 1️⃣ Authentication
 
 **Description:**  
 We will implement secure authentication using JSON Web Tokens (JWT) or OAuth2 to verify the identity of users before granting access to protected endpoints.
@@ -326,7 +316,7 @@ We will implement secure authentication using JSON Web Tokens (JWT) or OAuth2 to
 
 ---
 
-### 2️⃣ Authorization
+#### 2️⃣ Authorization
 
 **Description:**  
 Role-based access control (RBAC) will be used to restrict users to only the actions they are permitted to perform. For example, only property owners can edit their own listings.
@@ -337,7 +327,7 @@ Role-based access control (RBAC) will be used to restrict users to only the acti
 
 ---
 
-### 3️⃣ Data Validation and Sanitization
+#### 3️⃣ Data Validation and Sanitization
 
 **Description:**  
 All incoming data will be validated and sanitized to prevent injection attacks (SQL injection, XSS).
@@ -348,7 +338,7 @@ All incoming data will be validated and sanitized to prevent injection attacks (
 
 ---
 
-### 4️⃣ Rate Limiting & Throttling
+#### 4️⃣ Rate Limiting & Throttling
 
 **Description:**  
 Implement rate limiting to control the number of requests a user can make in a certain period, preventing abuse and DoS attacks.
@@ -359,7 +349,7 @@ Implement rate limiting to control the number of requests a user can make in a c
 
 ---
 
-### 5️⃣ Secure Data Transmission
+#### 5️⃣ Secure Data Transmission
 
 **Description:**  
 Enforce HTTPS across all endpoints to encrypt data in transit between client and server.
@@ -370,7 +360,7 @@ Enforce HTTPS across all endpoints to encrypt data in transit between client and
 
 ---
 
-### 6️⃣ Payment Security
+#### 6️⃣ Payment Security
 
 **Description:**  
 Integrate with secure, PCI-compliant payment gateways (e.g., Stripe, PayPal). Sensitive financial data will never be stored on our servers.
@@ -381,7 +371,7 @@ Integrate with secure, PCI-compliant payment gateways (e.g., Stripe, PayPal). Se
 
 ---
 
-### 7️⃣ Logging and Monitoring
+#### 7️⃣ Logging and Monitoring
 
 **Description:**  
 Maintain logs for critical API events and monitor for suspicious activity.
@@ -392,7 +382,7 @@ Maintain logs for critical API events and monitor for suspicious activity.
 
 ---
 
-### 8️⃣ Environment Configuration Security
+#### 8️⃣ Environment Configuration Security
 
 **Description:**  
 Sensitive credentials such as API keys, database passwords, and secret keys will be stored in environment variables and secured through proper secret management.
@@ -403,7 +393,7 @@ Sensitive credentials such as API keys, database passwords, and secret keys will
 
 ## CI/CD Pipeline
 
-### What is CI/CD?
+#### What is CI/CD?
 
 CI/CD stands for Continuous Integration and Continuous Deployment (or Delivery). It is a set of automated processes that allow code changes to be automatically tested, integrated, and deployed to production in a reliable and efficient way.
 
@@ -412,7 +402,7 @@ CI/CD stands for Continuous Integration and Continuous Deployment (or Delivery).
 
 ---
 
-### Why CI/CD is Important for This Project
+#### Why CI/CD is Important for This Project
 
 - 🚀 **Faster Development:** Speeds up the release cycle by automating testing and deployment.
 - ✅ **Improved Code Quality:** Early detection of bugs and integration issues.
@@ -422,7 +412,7 @@ CI/CD stands for Continuous Integration and Continuous Deployment (or Delivery).
 
 ---
 
-### Tools Used
+#### Tools Used
 
 - **GitHub Actions:** For automating the CI/CD workflows, running tests, building Docker images, and deploying to servers.
 - **Docker:** For containerizing the application, ensuring consistent environments across development, testing, and production.
@@ -433,7 +423,7 @@ CI/CD stands for Continuous Integration and Continuous Deployment (or Delivery).
 
 ---
 
-### CI/CD Workflow Overview
+#### CI/CD Workflow Overview
 
 1. Developer pushes code to GitHub repository.
 2. GitHub Actions triggers automated tests and code checks.
@@ -441,3 +431,9 @@ CI/CD stands for Continuous Integration and Continuous Deployment (or Delivery).
 4. If tests pass, Docker image is deployed to staging or production server.
 5. Monitoring tools ensure application health post-deployment.
 
+## Project Repository
+GitHub Repository: [airbnb-clone-project](https://github.com/mercyXp/airbnb-clone-project)
+
+```
+By Mercy Munzenzi
+```
