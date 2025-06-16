@@ -309,3 +309,95 @@ The system sends notifications for important events such as booking confirmation
 
 An administrative panel allows platform administrators to oversee user activity, manage listings, handle disputes, and monitor overall platform health. This feature supports platform governance and maintenance.
 
+## API Security
+
+Securing the backend APIs is essential to protect user data, ensure the integrity of transactions, and maintain trust on the platform. Below are the key security measures that will be implemented:
+
+---
+
+### 1️⃣ Authentication
+
+**Description:**  
+We will implement secure authentication using JSON Web Tokens (JWT) or OAuth2 to verify the identity of users before granting access to protected endpoints.
+
+**Why it's important:**  
+- Prevents unauthorized access to user accounts.
+- Ensures that only authenticated users can make bookings, post reviews, or modify properties.
+
+---
+
+### 2️⃣ Authorization
+
+**Description:**  
+Role-based access control (RBAC) will be used to restrict users to only the actions they are permitted to perform. For example, only property owners can edit their own listings.
+
+**Why it's important:**  
+- Prevents privilege escalation.
+- Protects sensitive operations and enforces correct user permissions.
+
+---
+
+### 3️⃣ Data Validation and Sanitization
+
+**Description:**  
+All incoming data will be validated and sanitized to prevent injection attacks (SQL injection, XSS).
+
+**Why it's important:**  
+- Protects the database and frontend from malicious data.
+- Ensures system stability and data integrity.
+
+---
+
+### 4️⃣ Rate Limiting & Throttling
+
+**Description:**  
+Implement rate limiting to control the number of requests a user can make in a certain period, preventing abuse and DoS attacks.
+
+**Why it's important:**  
+- Protects the server from being overloaded.
+- Prevents brute-force attacks on login endpoints.
+
+---
+
+### 5️⃣ Secure Data Transmission
+
+**Description:**  
+Enforce HTTPS across all endpoints to encrypt data in transit between client and server.
+
+**Why it's important:**  
+- Prevents eavesdropping and man-in-the-middle attacks.
+- Secures sensitive information such as login credentials and payment data.
+
+---
+
+### 6️⃣ Payment Security
+
+**Description:**  
+Integrate with secure, PCI-compliant payment gateways (e.g., Stripe, PayPal). Sensitive financial data will never be stored on our servers.
+
+**Why it's important:**  
+- Ensures compliance with financial regulations.
+- Protects both guests and hosts from fraud.
+
+---
+
+### 7️⃣ Logging and Monitoring
+
+**Description:**  
+Maintain logs for critical API events and monitor for suspicious activity.
+
+**Why it's important:**  
+- Enables quick detection and response to security breaches.
+- Helps in auditing and forensic analysis after incidents.
+
+---
+
+### 8️⃣ Environment Configuration Security
+
+**Description:**  
+Sensitive credentials such as API keys, database passwords, and secret keys will be stored in environment variables and secured through proper secret management.
+
+**Why it's important:**  
+- Prevents accidental exposure of sensitive information in code repositories.
+- Ensures secure deployment practices.
+
