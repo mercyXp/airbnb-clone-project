@@ -260,3 +260,52 @@ Represents payment transactions for bookings.
 - **Payments** are linked to a **Booking**.
 - **Reviews** belong to both **Users** and **Properties**.
 
+---
+## Feature Breakdown
+
+### 1️⃣ User Management
+
+The system allows users to register, log in, and manage their profiles. Users can be either guests or hosts. Hosts can list properties, while guests can book properties and leave reviews. Secure authentication and role-based access control ensure a safe and personalized experience.
+
+---
+
+### 2️⃣ Property Management
+
+Hosts can create, update, and delete property listings. Each property includes details such as location, price, images, amenities, and availability. This feature allows the platform to maintain an up-to-date catalog of accommodations for potential guests.
+
+---
+
+### 3️⃣ Booking System
+
+Guests can search for available properties, select dates, and make bookings. The system checks property availability, calculates total costs, and handles reservation status (pending, confirmed, canceled). This is the core functionality that enables users to reserve stays.
+
+---
+
+### 4️⃣ Payment Integration
+
+A secure payment system processes transactions for bookings. It handles payment methods, calculates amounts based on booking details, and manages payment status. This ensures a smooth and reliable financial process for both guests and hosts.
+
+---
+
+### 5️⃣ Reviews and Ratings
+
+Guests can leave reviews and ratings after completing their stays. Reviews include written feedback and star ratings, helping future guests make informed decisions and providing valuable feedback to hosts.
+
+---
+
+### 6️⃣ Search and Filtering
+
+Guests can search for properties based on location, price, amenities, availability, and other filters. This feature enhances user experience by allowing quick access to relevant listings that match guest preferences.
+
+---
+
+### 7️⃣ Notifications
+
+The system sends notifications for important events such as booking confirmations, cancellations, and payment updates. Notifications keep both guests and hosts informed throughout the booking process.
+
+---
+
+### 8️⃣ Admin Dashboard (Optional Advanced Feature)
+
+An administrative panel allows platform administrators to oversee user activity, manage listings, handle disputes, and monitor overall platform health. This feature supports platform governance and maintenance.
+
