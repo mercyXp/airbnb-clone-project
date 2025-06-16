@@ -434,6 +434,6 @@ CI/CD stands for Continuous Integration and Continuous Deployment (or Delivery).
 ## Project Repository
 GitHub Repository: [airbnb-clone-project](https://github.com/mercyXp/airbnb-clone-project)
 
-~~~
-By Mercy Munzenzi
-~~~
+---
+Author: Mercy Munzenzi
+---
