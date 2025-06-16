@@ -81,7 +81,7 @@ A well-designed booking system reduces friction in the user journey, increases c
 
 ---
 
-## Project Roles and Responsibilities
+## Team Roles 
 
 | Role | Responsibilities |
 |------|-------------------|
