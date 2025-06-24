@@ -15,7 +15,7 @@ This project is a full-stack clone of the popular accommodation booking platform
 - CSS
 - JavaScript
 - React (or similar framework)
-## Technology Stack 
+## Backend: 
 - Django
 > A high-level Python web framework used for building the RESTful API. It handles URL routing, request handling, user authentication, ORM (Object Relational Mapping), and many backend business logics efficiently.
 - Django REST Framework (DRF)
